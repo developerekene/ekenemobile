@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "ekenedilichukwu",
+    "name": "Ekenedilichukwu",
     "slug": "ekenedilichukwu",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -21,10 +21,16 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.devekene.ekenedilichukwu"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f1e8afbd-8ac7-42ec-ac7e-86c0401f084a"
+      }
     }
   }
 }
