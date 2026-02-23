@@ -37,10 +37,30 @@ const MENTORING_SESSIONS = [
 ];
 
 const BOOKS = [
-    { id: 'b1', title: 'The Silent Architect', category: 'Philosophy', cover: 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=200' },
-    { id: 'b2', title: 'Cognitive Networks', category: 'Technology', cover: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=200' },
-    { id: 'b3', title: 'Beyond the Binary', category: 'Logic', cover: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=200' },
-    { id: 'b4', title: 'Human Intelligence', category: 'Psychology', cover: 'https://images.unsplash.com/photo-1589998059171-988d887df646?auto=format&fit=crop&q=80&w=200' },
+    {
+        id: 'b1',
+        title: '9 Laws of an Entrepreneur',
+        category: 'Business',
+        cover: 'https://scontent.flhr13-1.fna.fbcdn.net/v/t1.6435-9/127489260_3770687716286613_5920261520518974507_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_ohc=U2pJsJB0ZYAQ7kNvwHxVwOe&_nc_oc=AdlwQa0VMQEqg2PUQxINuCzqt1UgNBsXMihWlbWGyx67Cpof41WCjzxVoOK-izjwYWA&_nc_zt=23&_nc_ht=scontent.flhr13-1.fna&_nc_gid=wC7DmWvpQXv0HRPSMoAfMQ&oh=00_AftWsfI0PFBg1LujL6mypPW43BkYEF3pmAF_QsdRh8GfyQ&oe=69C40C87'
+    },
+    {
+        id: 'b2',
+        title: 'Beginner’s Guide to HTML and CSS',
+        category: 'Web Development',
+        cover: 'https://ebooks.digitalpathsala.com/wp-content/uploads/2025/07/HTML-CSS-Handwritten-Notes-260x325.webp'
+    },
+    {
+        id: 'b3',
+        title: 'Laws of JavaScript',
+        category: 'Programming',
+        cover: 'https://images.manning.com/320/400/resize/book/5/c5bd123-f4fd-4a03-9069-9309c782ea7e/Atencio_hires_Fc.png'
+    },
+    {
+        id: 'b4',
+        title: 'React JS Shinobi',
+        category: 'Frontend Development',
+        cover: 'https://cdn.thegamesdb.net/images/original/boxart/front/39654-1.jpg'
+    },
 ];
 
 const PODCASTS = [
@@ -191,36 +211,36 @@ const HomeScreen: React.FC = ({ navigation }: any) => {
                             <Text style={styles.menuItemText}>About Ekene</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.menuItem}>
+                        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('bookScreen')}>
                             <BookOpen color="#000" size={22} />
                             <Text style={styles.menuItemText}>Books</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.menuItem}>
+                        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('mentoringScreen')}>
                             <GraduationCap color="#000" size={22} />
                             <Text style={styles.menuItemText}>Mentoring</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.menuItem}>
+                        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('podcastScreen')}>
                             <Mic color="#000" size={22} />
                             <Text style={styles.menuItemText}>Podcast</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.menuItem}>
+                        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('coursesScreen')}>
                             <Play color="#000" size={22} />
                             <Text style={styles.menuItemText}>Courses</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.menuItem}>
+                        <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate('settingsScreen')}>
                             <Settings color="#000" size={22} />
                             <Text style={styles.menuItemText}>Settings</Text>
                         </TouchableOpacity>
 
                         <View style={styles.menuDivider} />
 
-                        <TouchableOpacity style={[styles.menuItem, { marginTop: 'auto' }]}>
+                        <TouchableOpacity style={[styles.menuItem, { marginTop: 'auto' }]} onPress={() => navigation.navigate('contactScreen')}>
                             <Mail color={PRIMARY_ORANGE} size={22} />
-                            <Text style={[styles.menuItemText, { color: PRIMARY_ORANGE }]}>Contact</Text>
+                            <Text style={[styles.menuItemText, { color: PRIMARY_ORANGE }]}>Let's Talk</Text>
                         </TouchableOpacity>
                     </View>
                 </SafeAreaView>

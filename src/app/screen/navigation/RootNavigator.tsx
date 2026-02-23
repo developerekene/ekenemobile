@@ -5,6 +5,12 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import WelcomeScreen from "../WelcomeScreen";
 import HomeScreen from "../HomeScreen";
 import AboutEkeneScreen from "../AboutEkeneScreen";
+import BookScreen from "../BookScreen";
+import MentoringScreen from "../MentoringScreen";
+import CoursesScreen from "../CoursesScreen";
+import PodcastScreen from "../PodcastScreen";
+import ContactScreen from "../ContactScreen";
+import SettingsScreen from "../SettingsScreen";
 import { NavigationContainer } from "@react-navigation/native";
 
 const Stack = createNativeStackNavigator();
@@ -19,6 +25,12 @@ const RootNavigator: React.FC = () => {
                 <Stack.Screen name="welcome" component={WelcomeScreen} />
                 <Stack.Screen name="homeScreen" component={HomeScreen} />
                 <Stack.Screen name="aboutEkeneScreen" component={AboutEkeneScreen} />
+                <Stack.Screen name="bookScreen" component={BookScreen} />
+                <Stack.Screen name="mentoringScreen" component={MentoringScreen} />
+                <Stack.Screen name="podcastScreen" component={PodcastScreen} />
+                <Stack.Screen name="coursesScreen" component={CoursesScreen} />
+                <Stack.Screen name="settingsScreen" component={SettingsScreen} />
+                <Stack.Screen name="contactScreen" component={ContactScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );
